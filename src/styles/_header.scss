@@ -1,0 +1,134 @@
+.nav {
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 5%;
+}
+.nav_logo {
+  height: 50px;
+  width: 50px;
+  img {
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+.nav_menu {
+  display: flex;
+  .nav_menu_item {
+    padding: 0.5rem 1rem;
+    transition: 0.2s;
+    &:hover {
+      border-radius: 6px;
+      background: rgba(238, 238, 238, 0.2);
+    }
+    .nav_menu_item_link {
+      display: inline-block;
+      font-size: 1.2rem;
+      transition: 0.2s;
+    }
+    &:hover > .nav_menu_item_link {
+      animation: hit 0.3s both;
+    }
+  }
+}
+.expanded {
+  a {
+    color: #eee;
+  }
+}
+.mode_switch {
+  label {
+    cursor: pointer;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    input {
+      display: none;
+    }
+    input + .mode_switch_img {
+      background-image: url("../assets/images/sun.png");
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      transition: 0.5s;
+    }
+    input:checked + .mode_switch_img {
+      background-image: url("../assets/images/moon.png");
+    }
+  }
+}
+.nav_menu_burger {
+  cursor: pointer;
+  display: none;
+  border: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.2s;
+  overflow: hidden;
+  &:hover {
+    background: rgba(238, 238, 238, 0.2);
+  }
+  .nav_menu_burger_line {
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    transition: 0.3s;
+    &:nth-child(1) {
+      background-color: #f2aa3c;
+      border: 1px solid rgba(#333, 0.2);
+    }
+  }
+}
+@keyframes hit {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-80%);
+    font-weight: 600;
+  }
+  100% {
+    transform: translateY(0%);
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: $break_pad) {
+  .nav {
+    .nav_menu_burger {
+      display: block;
+    }
+    .nav_menu {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 70px 5%;
+      height: calc(100vh - 70px);
+      text-align: right;
+      background-color: #333;
+      transform: translateX(100%);
+      transition: 0.3s;
+      .nav_menu_item {
+        width: 100%;
+      }
+    }
+    .expanded {
+      transform: translateX(0%);
+    }
+  }
+}

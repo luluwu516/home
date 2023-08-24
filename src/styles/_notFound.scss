@@ -1,0 +1,109 @@
+.notFound {
+  width: 100%;
+  height: calc(100% - 140px);
+  top: 70px;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2vh;
+  text-align: center;
+  .error {
+    font-size: 2rem;
+    font-weight: bold;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    span:first-of-type {
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      animation: glitch 3s steps(1) infinite;
+      opacity: 0.5;
+    }
+    span:last-of-type {
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      animation: glitch 2.3s steps(1) infinite;
+    }
+  }
+
+  .glitch {
+    font-size: 5rem;
+    font-weight: bold;
+    color: yellow;
+    position: relative;
+    text-shadow: -4px -4px 0 red, 4px 4px 0 cyan;
+    span {
+      position: absolute;
+      top: -5px;
+      left: 0;
+    }
+    span:first-of-type {
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      animation: glitch 3s steps(1) infinite;
+    }
+    span:last-of-type {
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      animation: glitch 2.3s steps(1) infinite;
+    }
+  }
+  .bigHeading {
+    width: 50%;
+    h2 {
+      margin: 1vh 0;
+    }
+  }
+  .char_container {
+    &:hover {
+      &:after {
+        content: "Don't worry!";
+        color: #333;
+        display: inline-block;
+        position: absolute;
+        padding: 10px;
+        border-radius: 6px;
+        left: 110%;
+        top: 0%;
+        font-weight: 600;
+        transition: 0.5s;
+        background: rgb(238, 238, 238);
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 16%;
+        left: 100%;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid rgb(238, 238, 238);
+      }
+    }
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0px);
+  }
+  55% {
+    transform: translate(0px) skew(20deg);
+  }
+  60% {
+    transform: translate(8px);
+    color: transparent;
+  }
+  65% {
+    transform: translate(0, 8px);
+    color: inherit;
+  }
+  90% {
+    transform: translate(8px, 8px) skew(-10deg);
+    color: #333;
+  }
+  100% {
+    transform: translate(8px 8px);
+    color: inherit;
+  }
+}
