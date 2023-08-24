@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/home/static/css/main.2a613c2e.css",
+    "main.js": "/home/static/js/main.db0d3659.js",
+    "static/media/zoolleyball1.gif": "/home/static/media/zoolleyball1.097a2ec44b8dfc381286.gif",
+    "static/media/photo.png": "/home/static/media/photo.42b95e2c9dca629d7538.png",
+    "static/media/google_open.png": "/home/static/media/google_open.59bc0c32cec785599057.png",
+    "static/media/photo3.jpg": "/home/static/media/photo3.ef3afcc07e49b6e8b05d.jpg",
+    "static/media/digitalArt1.png": "/home/static/media/digitalArt1.4ad4f89e2e30d1c6c27a.png",
+    "static/media/zoolleyball_open.png": "/home/static/media/zoolleyball_open.72e94fd3b5cf01bbc6a3.png",
+    "static/media/digitalArt2.jpg": "/home/static/media/digitalArt2.4704c38eae1efc1bfb3b.jpg",
+    "static/media/digitalArt3.png": "/home/static/media/digitalArt3.d95776164532818efb88.png",
+    "static/media/photo2.jpg": "/home/static/media/photo2.17bbeb439282edd0cad3.jpg",
+    "static/media/streamlit_open.png": "/home/static/media/streamlit_open.cf43981544a5b0594a3c.png",
+    "static/media/grouper_open.png": "/home/static/media/grouper_open.6f9ddfbbb4f4071975d2.png",
+    "static/media/portfolio_open.png": "/home/static/media/portfolio_open.8f5c8c91e33ca97467e6.png",
+    "static/media/volleyball3.jpeg": "/home/static/media/volleyball3.aec71db9394f0b9957e4.jpeg",
+    "static/media/grouper1.png": "/home/static/media/grouper1.8c20e73dd72b457bc887.png",
+    "static/media/volleyball2.jpeg": "/home/static/media/volleyball2.254546e9f8f390a81172.jpeg",
+    "static/media/photo1.jpeg": "/home/static/media/photo1.458c8ac9b3cb8298323e.jpeg",
+    "static/media/volleyball1.jpeg": "/home/static/media/volleyball1.6f82f9ffd9c11af1f1d5.jpeg",
+    "static/media/streamlit1.png": "/home/static/media/streamlit1.e5bae4a753c011ff3599.png",
+    "static/media/zoolleyball.png": "/home/static/media/zoolleyball.85d4bd3ba97ebd92a808.png",
+    "static/media/coding3.png": "/home/static/media/coding3.93610964bb741ed6e088.png",
+    "static/media/logo.png": "/home/static/media/logo.d33d4b320d30d737ef32.png",
+    "static/media/coding1.png": "/home/static/media/coding1.fe135bfa7e20426f777c.png",
+    "static/media/portfolio1.png": "/home/static/media/portfolio1.33de4d5fc7ccb6175bc1.png",
+    "static/media/zoolleyball2.png": "/home/static/media/zoolleyball2.3ab9818e78744f3eacab.png",
+    "static/media/portfolio.png": "/home/static/media/portfolio.bbcbb7be92f3b381fd68.png",
+    "index.html": "/home/index.html",
+    "main.2a613c2e.css.map": "/home/static/css/main.2a613c2e.css.map",
+    "main.db0d3659.js.map": "/home/static/js/main.db0d3659.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a613c2e.css",
+    "static/js/main.db0d3659.js"
+  ]
+}
