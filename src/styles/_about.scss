@@ -80,29 +80,24 @@
   .resume_btn {
     cursor: pointer;
     display: inline-block;
-    background-color: #f2aa3c;
+    background-color: #333;
     font-weight: 600;
     font-size: 1.2rem;
     color: #fff;
     padding: 0 1rem;
     overflow: hidden;
     border: 2px double #ddd;
-    border-color: #ddd;
-    border-style: double;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 300%;
-      top: -100%;
-      left: -100%;
-      background: #888;
-      opacity: 0.1;
-      transform: rotate(-45deg);
-      transition: 0.2s ease-in;
+    transform: translateY(4px);
+    transition: 0.2s;
+    &:hover {
+      background-color: #ddd;
+      border-color: #333;
+      color: #333;
     }
-    &:hover::after {
-      left: 120%;
+    &:active {
+      background-color: #f2aa3c;
+      color: #333;
+      border-color: #ddd;
     }
   }
 }

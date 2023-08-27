@@ -5,10 +5,10 @@ import dog1 from "../assets/images/projects/dog1.png";
 import dog2 from "../assets/images/projects/dog2.png";
 import dog3 from "../assets/images/projects/dog3.png";
 
-import portfolio from "../assets/images/projects/portfolio.png";
-import portfolio_open from "../assets/images/projects/portfolio_open.png";
-import portfolio1 from "../assets/images/projects/portfolio1.png";
-import portfolio2 from "../assets/images/projects/portfolio2.png";
+import website from "../assets/images/projects/website.png";
+import website_open from "../assets/images/projects/website_open.png";
+import website1 from "../assets/images/projects/website1.png";
+import website2 from "../assets/images/projects/website2.png";
 import grouper from "../assets/images/projects/grouper.png";
 import grouper_open from "../assets/images/projects/grouper_open.png";
 import grouper1 from "../assets/images/projects/grouper1.png";
@@ -54,8 +54,8 @@ const data = [
     alt: "The Volleyball Game",
     github: "https://github.com/luluwu516/volleyball_game",
     description: [
-      "Utilizing Pygame, I have developed a volleyball minigame incorporating basic concepts introduced in Pygame's tutorial along with insights from official documentation. The game challenges players to try catching as many balls as they can, putting their reflexes and agility to the test.",
-      "This project stands as one of my first independently developed game and a stepping stone. I am in the process of designing a comprehensive gaming experience reminiscent of classic titles, including diverse characters, stages, modes, and even two-player features. Stayed tuned!",
+      "Utilizing Pygame, I developed a volleyball minigame incorporating basic concepts introduced in Pygame's tutorial and insights from the official documentation. The game challenges players to try catching as many balls as they can, putting their reflexes and agility to the test.",
+      "This project stands as one of my first independently developed games and a stepping stone. I am in the process of designing a comprehensive gaming experience reminiscent of classic titles, including diverse characters, stages, modes, and even two-player features. Stayed tuned!",
     ],
     img1: zoolleyball1,
     problem: [
@@ -68,24 +68,24 @@ const data = [
   },
   {
     id: 3,
-    name: "This website!",
-    img: portfolio,
-    open_img: portfolio_open,
+    name: "This Website!",
+    img: website,
+    open_img: website_open,
     alt: "This Website!",
-    github: "https://github.com/luluwu516/portfolio",
+    github: "https://github.com/luluwu516/website",
     description: [
-      "Coding is fun and creative. I use React, because its features allows me to build individual components and combine them into pages, just like LEGO!",
-      "To demostrate my cheerful and positive personality, my portfolio was inspired by Mario Brothers and Pixel Art designed to introduce myself like playing a game.",
+      "Coding is fun and creative. I use React because its features allow me to build individual components and combine them into pages, just like LEGO!",
+      "To demonstrate my cheerful and positive personality, my website was inspired by Mario Brothers and Pixel Art designed to introduce myself like playing a game.",
       "If you have any questions about me, feel free to contact me. I hope you have a great time exploring my website!",
     ],
-    img1: portfolio1,
+    img1: website1,
     problem: [
       "From building this website, I have learned to practice the following skills: ",
-      "1. Competitor Analysis: In the early stages of development, when I was exploring ways to make my design come true, I visited others' portfolios and utilized development tools to learn from them.",
+      "1. Competitor Analysis: In the early stages of development, when I was exploring ways to make my design come true, I visited others' websites and utilized development tools to learn from them.",
       "2. Performance optimization: I have been learning front-end programming from many resources on the Internet. I am aware of my shortcomings when it comes to coding. Sometimes, I learn from ChatGPT by asking it to improve my code.",
       "3. Troubleshooting: This is by far my greatest challenge. During development, I faced plenty of problems but was able to overcome them with the help of Stack Overflow, GitHub, CSS-Tricks, ChatGPT, etc. Nowadays, as technology progresses, I have adapted to learn not only from teachers but also from artificial intelligence, which is also a very efficient learning resource. ",
     ],
-    img2: portfolio2,
+    img2: website2,
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "React"],
   },
   {
@@ -110,21 +110,21 @@ const data = [
   },
   {
     id: 5,
-    name: "Vision AI",
+    name: "Vision AI Categorizer",
     img: google,
     open_img: google_open,
-    alt: "Google Cloud (with Java)",
+    alt: "Vision AI Categorizer",
     github: "https://github.com/luluwu516/VisionAI_demo",
     description: [
       "This application leverages the capabilities of the Vision API to analyze and categorize images, subsequently generating classifications. These outcomes are then exported into an Excel format using Java.",
-      "Google Cloud Vision AI stands as a robust machine learning solution within the Google Cloud Platform (GCP) portfolio. It empowers developers to seamlessly integrate advanced visual functionalities into their applications.",
+      "Google Cloud Vision AI is a robust machine learning solution within the Google Cloud Platform (GCP) portfolio. It empowers developers to integrate advanced visual functionalities into their applications seamlessly.",
       "My personal experience involves deploying this API to systematically categorize an extensive collection of photos stored within my legacy drive. The efficiency and accuracy achieved through this application are truly noteworthy, akin to the convenience we experience with modern smartphones.",
     ],
     img1: google1,
     problem: [
       "During the process of creating this program, I have learned to practice the following skills: ",
-      "1. API Versions: I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve desired functionality.",
-      '2. Debuging: I encountered an error labeled "Bad image data," which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
+      "1. API Versions: I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve the desired functionality.",
+      '2. Debugging: I encountered an error labeled "Bad image data," which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
     ],
     img2: google2,
     skills: ["Java", "Google Cloud"],

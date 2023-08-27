@@ -20,7 +20,7 @@ const jobs = [
       "Tutored other students with C, Python, Java, and Microsoft Office.",
     ],
     intro:
-      "Teaching and learning are two sides of the same coin. I find great satisfaction and inspiration as I learned to approach problems from various perspectives while working with my students. Besides formal education, I independently learn from online resources, and I share comprehensive notes on Notion with my students and friends.",
+      "Teaching and learning are two sides of the same coin. I find great satisfaction and inspiration as I learn to approach problems from various perspectives while working with my students. Besides formal education, I independently learn from online resources, and I share comprehensive notes on Notion with my students and friends.",
   },
   {
     time: 2022,
@@ -53,7 +53,7 @@ const jobs = [
       "Presented research achievements in multiple global conferences.",
     ],
     intro:
-      "Driven by a passion for nature, I began my career in Animal Science, a field I developed expertise and lab skills. As I later shifted to Computer Science, I channeled my analytical and problem-solving abilities. This change in my career path showcases my adaptability, steadfast commitment to impactful learning, and unwavering passion for positive change.",
+      "Driven by a passion for nature, I began my career in Animal Science, where I developed expertise and lab skills. As I later shifted to Computer Science, I channeled my analytical and problem-solving abilities. This change in my career path showcases my adaptability, steadfast commitment to impactful learning, and unwavering passion for positive change.",
   },
 ];
 

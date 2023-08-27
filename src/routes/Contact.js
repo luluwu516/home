@@ -1,7 +1,9 @@
 import React from "react";
 
 const Contact = () => {
-  const contactHandler = () => {
+  const contactHandler = (event) => {
+    event.preventDefault();
+
     let name = document.getElementById("name").value;
     let infoElem = document.getElementById("info");
     let info = infoElem.value
@@ -9,7 +11,7 @@ const Contact = () => {
       : "Nice%20to%20meet%20you.";
 
     window.open(
-      `mailto:sky110423@gmail.com?subject=You%20got%20an%20mail&body=Hello%20Lulu,%20\nMy%20name%20is%20${name}.%20${info}`
+      `mailto:sky110423@gmail.com?subject=You%20got%20an%20mail&body=Hello%20Lulu,%0d%0a%0d%0aMy%20name%20is%20${name}.%20${info}%0d%0a%0d%0a%0d%0a${name}`
     );
   };
 

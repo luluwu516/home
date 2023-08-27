@@ -13,9 +13,9 @@ import coding1 from "../assets/images/favorite/coding/coding1.png";
 import coding2 from "../assets/images/favorite/coding/coding2.png";
 import coding3 from "../assets/images/favorite/coding/coding3.png";
 import volleyball from "../assets/images/favorite/volleyball.png";
-import volleyball1 from "../assets/images/favorite/volleyball/volleyball1.jpeg";
-import volleyball2 from "../assets/images/favorite/volleyball/volleyball2.jpeg";
-import volleyball3 from "../assets/images/favorite/volleyball/volleyball3.jpeg";
+import volleyball1 from "../assets/images/favorite/volleyball/volleyball1.png";
+import volleyball2 from "../assets/images/favorite/volleyball/volleyball2.png";
+import volleyball3 from "../assets/images/favorite/volleyball/volleyball3.png";
 
 const my_favorite = [
   {
@@ -51,7 +51,7 @@ const my_favorite = [
   {
     name: "Volleyball",
     intro: [
-      "Volleyball is a team sport, emphasizing cooperation, communication, and coordination. I love volleyball and the feeling of becoming better at the sport with my teammates.",
+      "Volleyball is a team sport emphasizing cooperation, communication, and coordination. I love volleyball and the feeling of becoming better at the sport with my teammates.",
       "I served as the Vice President of the school team, consistently inspiring motivation within the group through showing perseverance and dedication during group practices.",
       "Volleyball encompasses strategic cognition and the astute identification of vulnerabilities within the opposing team's defensive formation.",
       "The camaraderie I consistently cherish arises from the collaborative pursuit of shared objectives, which reinforces the bonds among teammates.",

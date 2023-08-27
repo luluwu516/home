@@ -79,7 +79,16 @@ const About = () => {
                   <p>{bio}</p>
                 </div>
                 <div className="resume">
-                  Check out my <button className="resume_btn">RESUME</button>
+                  Check out my{" "}
+                  <a
+                    className="resume_btn"
+                    href="Lulu_Wu_resume_2023.pdf"
+                    download="Yi-Lu_Wu_Resume_2023.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    RESUME
+                  </a>
                 </div>
               </div>
             </div>
