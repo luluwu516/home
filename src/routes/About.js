@@ -82,8 +82,7 @@ const About = () => {
                   Check out my{" "}
                   <a
                     className="resume_btn"
-                    href="Lulu_Wu_resume_2023.pdf"
-                    download="Yi-Lu_Wu_Resume_2023.pdf"
+                    href="https://drive.google.com/file/d/1_yzTLO0WFZc3A7SHcBmq1oUzKd9lEx8D/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
