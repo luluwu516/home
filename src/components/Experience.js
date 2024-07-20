@@ -1,132 +1,111 @@
-import React, { useState } from "react";
+import React from "react";
 
-import clock from "../assets/images/clock.png";
+import exp from "../assets/images/about/exp.png";
 
-import exp_frame from "../assets/images/job/avatar_frame.png";
-import now from "../assets/images/job/now.png";
-import chowfood from "../assets/images/job/chowfood.png";
-import ntu from "../assets/images/job/ntu.png";
-import college from "../assets/images/job/college.png";
-
-const clock_index = [1, 2, 3, 4, 5, 6];
-
-const jobs = [
+const experiences = [
   {
-    time: 2023,
+    time: "Jan. 2023",
     title: "Student Tutor",
-    place: "Irvine Valley College, Irvine, CA, USA",
+    location: "Irvine Valley College, Irvine, CA",
     works: [
-      "Graded As in Computer Science.",
-      "Tutored other students with C, Python, Java, and Microsoft Office.",
+      "Managed and coordinated Computer Tutoring sessions",
+      "Guided students from 9 to over 50-years-old in learning C, C++, Python, Java, Data Structures, Microsoft Office, and other subjects",
+      "Developed and maintained a tutoring resource website",
     ],
-    intro:
-      "Teaching and learning are two sides of the same coin. I find great satisfaction and inspiration as I learn to approach problems from various perspectives while working with my students. Besides formal education, I independently learn from online resources, and I share comprehensive notes on Notion with my students and friends.",
   },
   {
-    time: 2022,
+    time: "Aug. 2022",
+    title: "Computer Science Student",
+    location: "Irvine Valley College, Irvine, CA",
+    works: [
+      "Applied academic knowledge to develop and improve on personal projects",
+      "Served as a student tutor, providing assistance to peers",
+    ],
+  },
+  {
+    time: "Feb. 2022",
     title: "Research Assistant",
-    place: "National Taiwan University, Taipei, Taiwan",
+    location: "National Taiwan University, Taipei, Taiwan",
     works: [
-      "Conducted research project on the study of antibacterial feed additives.",
-      "Analyzed and visualized bioinformation data of multiple scientific studies.",
+      "Developed a Python application to group experimental animals, which was utilized among peers",
+      "Analyzed and visualized bioinformatic data for multiple scientific studies",
+      "Publication: Wang, S.-Y., Chen, Y.-P., Huang, R.-F., Wu, Y.-L., Ho, S.-T., Li, K.-Y., Watanabe, K., & Chen, M.-J. (2022). Subspecies classification and comparative genomic analysis of Lactobacillus kefiranofaciens HL1 and M1 for potential niche-specific genes and pathways. Microorganisms, 10(8), 1637. https://doi.org/10.3390/microorganisms10081637",
     ],
-    intro:
-      "Recognizing the potential synergy between my role as a research scientist and the field of Computer Science, I embarked on a journey to improve my skill set. Upon immersing myself in programming, a profound sense of achievement emerged from exploring various tools, problem-solving endeavors, and the art of experimentation.",
   },
   {
-    time: 2018,
-    title: "R&D Specialist",
-    place: "Chow food biotechnology Co., Ltd., Taipei, Taiwan",
+    time: "Sep. 2018",
+    title: "Research and Development (R&D) Specialist",
+    location: "Chow Food Biotechnology Co., Ltd, Taiwan",
     works: [
-      "Completed team project on clean-label product development.",
-      "Co-organized exhibitions and lead multiple teams with people from different backgrounds.",
+      "Completed a team project on clean-label product development",
+      "Co-organized exhibitions, leading diverse teams from various backgrounds",
     ],
-    intro:
-      "My past academic and job experiences require clear thinking and great attention to detail. I am goal-oriented and collaborative, and I have developed, through team projects, industry-level products that were later commercialized.",
   },
   {
-    time: 2012,
-    title: "Education in Animal Science",
-    place: "MS and BS in Animal Science, Taiwan",
+    time: "Sep. 2016",
+    title: "MS in Animal Science and Technology",
+    location: "National Taiwan University, Taipei, Taiwan",
     works: [
-      "Screened an anti-inflammatory probiotic and a high lipase activity yeast that were later commercialized in the industry.",
-      "Presented research achievements in multiple global conferences.",
+      "Isolated and identified lipase-producing microorganisms from food for margarine production",
+      "Presented research achievements in multiple global conferences and received an honorable mention in the 2017 Taiwan Association for Lactic Acid Bacteria poster competition",
+      "Received the 30th Gemfont Co. Scholarship (award for outstanding student) in 2017",
     ],
-    intro:
-      "Driven by a passion for nature, I began my career in Animal Science, where I developed expertise and lab skills. As I later shifted to Computer Science, I channeled my analytical and problem-solving abilities. This change in my career path showcases my adaptability, steadfast commitment to impactful learning, and unwavering passion for positive change.",
   },
-];
-
-const jobs_avatar = [
-  { transform: "translateX(0)" },
-  { transform: "translateX(-100%)" },
-  { transform: "translateX(-200%)" },
-  { transform: "translateX(-300%)" },
+  {
+    time: "Sep. 2012",
+    title: "BS in Animal Science",
+    location: "National Chung Hsing University, Taichung, Taiwan",
+    works: [
+      "Served as the Vice President of the school volleyball team and led the team to the University Volleyball League",
+      "Served as a Student Council member assisting with managing student activities",
+      "Received the Academic Excellence Award (award for exemplary academic performance) in 2014",
+    ],
+  },
 ];
 
 const Experience = () => {
-  const [jobIndex, setJobIndex] = useState(0);
-
   return (
-    <div className="slide2_experience">
-      <div className="bg_clocks">
-        {clock_index.map((i, key) => (
-          <div className={`clock_box clock_box${i}`} key={key + 1}>
-            <img className="clock" src={clock} alt="" width="100%" />
-            <svg className="clock_hands" viewBox="-50 -50 100 100">
-              <line id={`hour${i}`} x1="0" y1="0" x2="20" y2="0"></line>
-              <line id={`min${i}`} x1="0" y1="0" x2="0" y2="36"></line>
-            </svg>
-          </div>
+    <div className="experience">
+      <ul className="timeline">
+        <h2 className="timeline-header">My experiences</h2>
+        {experiences.map((job, i) => (
+          <React.Fragment key={i}>
+            <li className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-time">{job.time}</div>
+                <h3 className="timeline-title">{job.title}</h3>
+                <h5 className="timeline-location">
+                  <i className="fa-solid fa-location-dot"></i>
+                  {job.location}
+                </h5>
+                <ul className="timeline-works">
+                  {job.works.map((work, j) => (
+                    <li className="timeline-work" key={i + "-" + j}>
+                      {work}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            {i === 2 ? (
+              <li className="timeline-milestone">
+                <div className="timeline-milestone-info">
+                  After analyzing bio-information data and spending more than 1
+                  hour grouping experimental piglets, I started learning to
+                  program, fell in love with the computer world, and decided to
+                  dive in more.
+                </div>
+                <img
+                  src={exp}
+                  alt="Leave comfort zone"
+                  className="timeline-milestone-img"
+                />
+              </li>
+            ) : null}
+          </React.Fragment>
         ))}
-      </div>
-      <div className="exp_timeline">
-        {jobs.map((job, i) => (
-          <div
-            className="exp_timeline_point"
-            key={i + 1}
-            onClick={() => setJobIndex(jobs.indexOf(job))}
-          >
-            <h2 className="exp_timeline_year">{job.time}</h2>
-          </div>
-        ))}
-      </div>
-      <div className="exp_status">
-        <div className="exp_status_show">
-          <div className="exp_status_appearance">
-            <div
-              className="exp_status_appearance_img"
-              style={jobs_avatar[jobIndex]}
-            >
-              <img src={now} alt="" />
-              <img src={ntu} alt="" />
-              <img src={chowfood} alt="" />
-              <img src={college} alt="" />
-            </div>
-            <img
-              src={exp_frame}
-              alt=""
-              className="exp_status_appearance_frame"
-            />
-          </div>
-          <div className="exp_status_job">
-            <div className="exp_status_job_title">
-              <h2>{jobs[jobIndex].title}</h2>
-              <h5>{jobs[jobIndex].place}</h5>
-            </div>
-            <div className="exp_status_job_works">
-              <ul>
-                {jobs[jobIndex].works.map((work, i) => (
-                  <li key={i + 1}>{work}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="exp_status_job_intro">
-          <p>{jobs[jobIndex].intro}</p>
-        </div>
-      </div>
+      </ul>
     </div>
   );
 };

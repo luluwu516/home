@@ -1,7 +1,7 @@
 .contact {
   width: 100%;
-  height: calc(100% - 140px);
-  top: 70px;
+  height: calc(100% - 2 * $header_height);
+  top: $header_height;
   padding: 5%;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     bottom: 0;
   }
-  .main {
+  .contact_container {
     width: 80%;
     max-width: 600px;
     height: 360px;
@@ -25,103 +25,6 @@
     flex-wrap: nowrap;
     gap: 5%;
     margin-bottom: 8vh;
-    .imgBox {
-      position: absolute;
-      width: 100%;
-      aspect-ratio: 18/11;
-      max-width: 630px;
-      max-height: 385px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      .mailCover {
-        width: 100%;
-        height: 100%;
-        background-image: url("../assets/images/mailcover.png");
-        background-size: cover;
-        transform: rotate(5deg);
-      }
-    }
-    form {
-      height: 100%;
-      width: 95%;
-      background-color: rgba(238, 238, 238, 0.8);
-      color: #333;
-      padding: 20px;
-      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
-      h4 {
-        margin: 5px 0px;
-      }
-      label {
-        display: inline-block;
-        margin: 8px 0px;
-        font-weight: 600;
-        span {
-          color: red;
-        }
-      }
-      input,
-      textarea {
-        font-size: 1.2rem;
-        display: block;
-        border: solid 3px #333;
-      }
-      input {
-        width: 60%;
-      }
-      textarea {
-        width: 100%;
-      }
-      button {
-        cursor: pointer;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 5px 15px;
-        margin-top: 2vh;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 600;
-        border: 4px solid #fff;
-        border-radius: 6px;
-        background-color: #ffc800;
-        &:hover {
-          background-color: #eee;
-          color: #333;
-        }
-      }
-    }
-    .information {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4vh;
-      width: 40px;
-      height: 100%;
-      background-color: #e0e0e0;
-      color: #333;
-      padding: 20px;
-      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
-      h2 {
-        width: fit-content;
-        margin: 0;
-        writing-mode: vertical-rl;
-      }
-      #icons {
-        display: flex;
-        flex-direction: column;
-        gap: 1vh;
-        a {
-          text-align: center;
-          color: #1f4ead;
-          font-size: 1.6rem;
-          transition: 0.2s;
-        }
-        a:hover {
-          transform: translateY(-2px) scale(1.1);
-          color: #3570f1;
-        }
-      }
-    }
   }
 
   .bubble {
@@ -132,6 +35,7 @@
     background: #fff;
     border-radius: 6px;
     text-align: center;
+    color: $dark-text;
     box-shadow: 2px 2px 5px #333;
     &:before {
       content: "";
@@ -162,6 +66,106 @@
     bottom: 0;
     transform: translateX(-50%) rotate(10deg);
     animation: peek 10s 10s 3, peek2 10s 40s;
+  }
+}
+
+.contact_container {
+  .container_background {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 18/11;
+    max-width: 630px;
+    max-height: 385px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .background_mailCover {
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/images/mailcover.png");
+      background-size: cover;
+      transform: rotate(5deg);
+    }
+  }
+  .container_form {
+    height: 100%;
+    width: 95%;
+    background-color: rgba(238, 238, 238, 0.8);
+    color: #333;
+    padding: 20px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+    h4 {
+      margin: 5px 0px;
+    }
+    label {
+      display: inline-block;
+      margin: 8px 0px;
+      font-weight: 600;
+      span {
+        color: red;
+      }
+    }
+    input,
+    textarea {
+      font-size: 1.2rem;
+      display: block;
+      border: solid 3px #333;
+    }
+    input {
+      width: 60%;
+    }
+    textarea {
+      width: 100%;
+    }
+    button {
+      cursor: pointer;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 15px;
+      margin-top: 2vh;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 4px solid #fff;
+      border-radius: 6px;
+      background-color: #ffc800;
+      &:hover {
+        background-color: #eee;
+        color: #333;
+      }
+    }
+  }
+  .container_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    width: 40px;
+    height: 100%;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 20px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+    h2 {
+      width: fit-content;
+      margin: 0;
+      writing-mode: vertical-rl;
+    }
+    #icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      a {
+        text-align: center;
+        color: #1f4ead;
+        font-size: 1.6rem;
+        transition: 0.2s;
+      }
+      a:hover {
+        transform: translateY(-2px) scale(1.1);
+        color: #3570f1;
+      }
+    }
   }
 }
 
@@ -214,5 +218,13 @@
   }
   70% {
     left: -20px;
+  }
+}
+
+@media screen and (max-width: $break_pad) {
+  .contact {
+    .contact_container input {
+      width: 100%;
+    }
   }
 }

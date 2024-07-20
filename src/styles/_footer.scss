@@ -2,10 +2,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  height: 70px;
-  top: 70px;
+  height: $header_height;
+  top: $header_height;
   background-image: url(../assets/images/block.png);
-  background-size: 70px;
+  background-size: $header_height;
   filter: brightness(120%);
   padding: 1vh 1vw;
   color: #fff;

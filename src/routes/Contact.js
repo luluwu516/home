@@ -18,11 +18,11 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="mailbox"></div>
-      <div className="main">
-        <div className="imgBox">
-          <div className="mailCover"></div>
+      <div className="contact_container">
+        <div className="container_background">
+          <div className="background_mailCover"></div>
         </div>
-        <form>
+        <form className="container_form">
           <h4>Hello Lulu,</h4>
           <label htmlFor="name">
             Name<span>*</span>
@@ -38,7 +38,7 @@ const Contact = () => {
             SEND
           </button>
         </form>
-        <div className="information">
+        <div className="container_sidebar">
           <h2>CONTACT</h2>
           <div id="icons" className="icons">
             <a

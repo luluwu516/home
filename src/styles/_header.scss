@@ -1,3 +1,4 @@
+/*----- Header -----*/
 .nav {
   z-index: 999;
   position: absolute;
@@ -7,10 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: $header-height;
   padding: 0 5%;
 }
-.nav_logo {
+.nav-logo {
   height: 50px;
   width: 50px;
   img {
@@ -18,31 +19,33 @@
     border-radius: 50%;
   }
 }
-.nav_menu {
+.nav-menu {
   display: flex;
-  .nav_menu_item {
-    padding: 0.5rem 1rem;
+  &-item-link {
     transition: 0.2s;
     &:hover {
       border-radius: 6px;
       background: rgba(238, 238, 238, 0.2);
     }
-    .nav_menu_item_link {
+    .nav-menu-item {
+      padding: 0.5rem 1rem;
       display: inline-block;
       font-size: 1.2rem;
       transition: 0.2s;
+      width: 100%;
+      height: 100%;
     }
-    &:hover > .nav_menu_item_link {
+    &:hover > .nav-menu-item {
       animation: hit 0.3s both;
     }
   }
 }
 .expanded {
   a {
-    color: #eee;
+    color: $light-text;
   }
 }
-.mode_switch {
+.mode-switch {
   label {
     cursor: pointer;
     display: flex;
@@ -50,20 +53,20 @@
     align-items: center;
     input {
       display: none;
-    }
-    input + .mode_switch_img {
-      background-image: url("../assets/images/sun.png");
-      background-size: cover;
-      width: 50px;
-      height: 50px;
-      transition: 0.5s;
-    }
-    input:checked + .mode_switch_img {
-      background-image: url("../assets/images/moon.png");
+      & + .mode-switch-img {
+        background-image: url("../assets/images/sun.png");
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        transition: 0.5s;
+      }
+      &:checked + .mode-switch-img {
+        background-image: url("../assets/images/moon.png");
+      }
     }
   }
 }
-.nav_menu_burger {
+.nav-menu-burger {
   cursor: pointer;
   display: none;
   border: 0;
@@ -75,9 +78,9 @@
   transition: 0.2s;
   overflow: hidden;
   &:hover {
-    background: rgba(238, 238, 238, 0.2);
+    background: rgba($light-text, 0.2);
   }
-  .nav_menu_burger_line {
+  &-line {
     width: 30px;
     height: 3px;
     position: absolute;
@@ -85,11 +88,11 @@
     left: 50%;
     border-radius: 20px;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: $light-text;
     transition: 0.3s;
     &:nth-child(1) {
-      background-color: #f2aa3c;
-      border: 1px solid rgba(#333, 0.2);
+      background-color: $primary-color;
+      border: 1px solid rgba($dark-text, 0.2);
     }
   }
 }
@@ -98,7 +101,7 @@
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(-80%);
+    transform: translateY(-40%);
     font-weight: 600;
   }
   100% {
@@ -107,24 +110,36 @@
   }
 }
 
-@media screen and (max-width: $break_pad) {
+@media screen and (max-width: $break-pad) {
   .nav {
-    .nav_menu_burger {
+    .nav-menu-burger {
       display: block;
     }
-    .nav_menu {
+    .nav-menu {
       display: inline-block;
       position: absolute;
       top: 0;
       right: 0;
-      padding: 70px 5%;
-      height: calc(100vh - 70px);
+      padding: $header-height 5%;
+      height: calc(100vh - #{$header-height});
       text-align: right;
       background-color: #333;
       transform: translateX(100%);
       transition: 0.3s;
-      .nav_menu_item {
-        width: 100%;
+      .nav-menu-item-link {
+        display: flex;
+        flex-direction: column;
+        &:hover {
+          background-color: rgba($dark-text, 0.2);
+        }
+
+        &:hover > .nav-menu-item {
+          animation: initial;
+        }
+        .nav-menu-item {
+          height: auto;
+          width: max-content;
+        }
       }
     }
     .expanded {

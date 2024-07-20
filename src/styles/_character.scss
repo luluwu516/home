@@ -1,14 +1,16 @@
 .char_container {
   position: absolute;
+  left: 50%;
   bottom: 0;
-  left: 0;
+  transform: translateX(-50%);
   z-index: 99;
   transition: 1s linear;
+  .character {
+    width: 144px;
+    height: 192px;
+  }
 }
-.character {
-  width: 144px;
-  height: 192px;
-}
+
 .dialog {
   display: inline-block;
   position: absolute;
@@ -36,5 +38,8 @@
   .dialog {
     top: -10%;
     width: 72%;
+  }
+  .char_container {
+    display: none;
   }
 }

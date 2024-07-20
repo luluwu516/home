@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/logo.png";
 
 const Header = ({ mode, setMode }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -12,59 +12,54 @@ const Header = ({ mode, setMode }) => {
 
   return (
     <nav className="nav">
-      <div className="nav_logo">
+      <div className="nav-logo">
         <Link to="/home">
           <img src={logo} alt="Logo" />
         </Link>
       </div>
-      <ul className={isNavExpanded ? "nav_menu expanded" : "nav_menu"}>
-        <li className="nav_menu_item">
-          <Link to="/home" data-content="HOME" className="nav_menu_item_link">
-            HOME
-          </Link>
-        </li>
-        <li className="nav_menu_item">
-          <Link to="/about" data-content="ABOUT" className="nav_menu_item_link">
-            ABOUT
-          </Link>
-        </li>
-        <li className="nav_menu_item">
-          <Link
-            to="/projects"
-            data-content="PROJECTS"
-            className="nav_menu_item_link"
-          >
-            PROJECTS
-          </Link>
-        </li>
-        <li className="nav_menu_item">
-          <Link
-            to="/contact"
-            data-content="CONTACT"
-            className="nav_menu_item_link"
-          >
-            CONTACT
-          </Link>
-        </li>
+      <ul className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
+        <Link to="/home" data-content="HOME" className="nav-menu-item-link">
+          <li className="nav-menu-item">HOME</li>
+        </Link>
+
+        <Link to="/about" data-content="ABOUT" className="nav-menu-item-link">
+          <li className="nav-menu-item">ABOUT</li>
+        </Link>
+
+        <Link
+          to="/projects"
+          data-content="PROJECTS"
+          className="nav-menu-item-link"
+        >
+          <li className="nav-menu-item">PROJECTS</li>
+        </Link>
+
+        <Link
+          to="/contact"
+          data-content="CONTACT"
+          className="nav-menu-item-link"
+        >
+          <li className="nav-menu-item">CONTACT</li>
+        </Link>
       </ul>
-      <div className="mode_switch">
+      <div className="mode-switch">
         <label>
           <input
             type="checkbox"
-            id="mode_switch_toggle"
+            id="mode-switch-toggle"
             onChange={modeHandler}
           />
-          <div className="mode_switch_img"></div>
+          <div className="mode-switch-img"></div>
         </label>
       </div>
       <button
-        className="nav_menu_burger"
+        className="nav-menu-burger"
         onClick={() => {
           setIsNavExpanded(!isNavExpanded);
         }}
       >
         <div
-          className="nav_menu_burger_line"
+          className="nav-menu-burger-line"
           style={
             isNavExpanded
               ? { transform: "translateX(-50%) translateY(-50%) rotate(45deg)" }
@@ -74,7 +69,7 @@ const Header = ({ mode, setMode }) => {
           }
         ></div>
         <div
-          className="nav_menu_burger_line"
+          className="nav-menu-burger-line"
           style={
             isNavExpanded
               ? { transform: "translateX(100%) translateY(0)" }
@@ -84,7 +79,7 @@ const Header = ({ mode, setMode }) => {
           }
         ></div>
         <div
-          className="nav_menu_burger_line"
+          className="nav-menu-burger-line"
           style={
             isNavExpanded
               ? {

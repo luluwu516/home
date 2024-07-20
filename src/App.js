@@ -10,6 +10,7 @@ import Projects from "./routes/Projects";
 import Contact from "./routes/Contact";
 import NotFound from "./routes/NotFound";
 
+// eslint-disable-next-line
 import style from "./styles/style.css";
 
 function App() {

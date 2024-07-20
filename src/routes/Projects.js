@@ -5,26 +5,26 @@ import dog1 from "../assets/images/projects/dog1.png";
 import dog2 from "../assets/images/projects/dog2.png";
 import dog3 from "../assets/images/projects/dog3.png";
 
-import website from "../assets/images/projects/website.png";
-import website_open from "../assets/images/projects/website_open.png";
-import website1 from "../assets/images/projects/website1.png";
-import website2 from "../assets/images/projects/website2.png";
-import grouper from "../assets/images/projects/grouper.png";
-import grouper_open from "../assets/images/projects/grouper_open.png";
-import grouper1 from "../assets/images/projects/grouper1.png";
-import grouper2 from "../assets/images/projects/grouper2.png";
-import zoolleyball from "../assets/images/projects/zoolleyball.png";
-import zoolleyball_open from "../assets/images/projects/zoolleyball_open.png";
-import zoolleyball1 from "../assets/images/projects/zoolleyball1.gif";
-import zoolleyball2 from "../assets/images/projects/zoolleyball2.png";
-import google from "../assets/images/projects/google.png";
-import google_open from "../assets/images/projects/google_open.png";
-import google1 from "../assets/images/projects/google1.png";
-import google2 from "../assets/images/projects/google2.png";
-import streamlit from "../assets/images/projects/streamlit.png";
-import streamlit_open from "../assets/images/projects/streamlit_open.png";
-import streamlit1 from "../assets/images/projects/streamlit1.png";
-import streamlit2 from "../assets/images/projects/streamlit2.png";
+import website from "../assets/images/projects/portfolio/website.png";
+import website_open from "../assets/images/projects/portfolio/website_open.png";
+import website1 from "../assets/images/projects/portfolio/website1.png";
+import website2 from "../assets/images/projects/portfolio/website2.png";
+import grouper from "../assets/images/projects/grouper/grouper.png";
+import grouper_open from "../assets/images/projects/grouper/grouper_open.png";
+import grouper1 from "../assets/images/projects/grouper/grouper1.png";
+import grouper2 from "../assets/images/projects/grouper/grouper2.png";
+import zoolleyball from "../assets/images/projects/zoolleyball/zoolleyball.png";
+import zoolleyball_open from "../assets/images/projects/zoolleyball/zoolleyball_open.png";
+import zoolleyball1 from "../assets/images/projects/zoolleyball/zoolleyball1.gif";
+import zoolleyball2 from "../assets/images/projects/zoolleyball/zoolleyball2.png";
+import google from "../assets/images/projects/googleAPI/google.png";
+import google_open from "../assets/images/projects/googleAPI/google_open.png";
+import google1 from "../assets/images/projects/googleAPI/google1.png";
+import google2 from "../assets/images/projects/googleAPI/google2.png";
+import streamlit from "../assets/images/projects/AIcopywriter/streamlit.png";
+import streamlit_open from "../assets/images/projects/AIcopywriter/streamlit_open.png";
+import streamlit1 from "../assets/images/projects/AIcopywriter/streamlit1.png";
+import streamlit2 from "../assets/images/projects/AIcopywriter/streamlit2.png";
 
 const data = [
   {
@@ -38,6 +38,20 @@ const data = [
       "Powered by OpenAI's advanced GPT-3.5 model, this program empowers users to craft captivating copy for various social media platforms effortlessly. This Streamlit website eliminates the complexities of content origination with unrivaled convenience. Experience the new AI technology by simply clicking the button in the AI Copywriter program through the Streamlit interface.",
     ],
     img1: streamlit1,
+    problem_intro:
+      "During the process of creating this program, I have learned and improved upon the following skills:",
+    problems: [
+      {
+        title: "1. Accurate Prompts: ",
+        intro:
+          "Well-designed prompts have the potential to significantly enhance the precision and logical flow of the generated text. It will be more accurate if we give it a role, define the goal, format the result, and set restrictions if needed.",
+      },
+      {
+        title: "2. Imported library: ",
+        intro:
+          "OpenAI and Streamlit are third-party libraries, which means they are not built into the Python programming language. To use these libraries, we need to follow their documentation and guidelines to utilize their features effectively. Both of these libraries are essential tools that simplify various aspects of software development.",
+      },
+    ],
     problem: [
       "During the process of creating this program, I have learned and improved upon the following skills:",
       "1. Accurate Prompts: Well-designed prompts have the potential to significantly enhance the precision and logical flow of the generated text. It will be more accurate if we give it a role, define the goal, format the result, and set restrictions if needed.",
@@ -58,6 +72,20 @@ const data = [
       "This project stands as one of my first independently developed games and a stepping stone. I am in the process of designing a comprehensive gaming experience reminiscent of classic titles, including diverse characters, stages, modes, and even two-player features. Stayed tuned!",
     ],
     img1: zoolleyball1,
+    problem_intro:
+      "From building this game, I have learned to practice the following skills: ",
+    problems: [
+      {
+        title: "1. Mathematical Simulation: ",
+        intro:
+          "I utilized fundamental mathematical formulas to simulate the physics within the game, creating an environment where items move naturally, including the effect of gravity.",
+      },
+      {
+        title: "2. Data Structure: ",
+        intro:
+          "During the development of the game, I learned more about data structures through online platforms like YouTube. Then, I strategically incorporated numerous features, such as Stack and Array, utilizing data structures, which enabled me to enhance the performance of the program significantly. This approach was imperative to prevent the program from becoming overly complex. ",
+      },
+    ],
     problem: [
       "From building this game, I have learned to practice the following skills: ",
       "1. Mathematical Simulation: I utilized fundamental mathematical formulas to simulate the physics within the game, creating an environment where items move naturally, including the effect of gravity.",
@@ -79,6 +107,25 @@ const data = [
       "If you have any questions about me, feel free to contact me. I hope you have a great time exploring my website!",
     ],
     img1: website1,
+    problem_intro:
+      "From building this website, I have learned to practice the following skills: ",
+    problems: [
+      {
+        title: "1. Competitor Analysis: ",
+        intro:
+          "In the early stages of development, when I was exploring ways to make my design come true, I visited others' websites and utilized development tools to learn from them.",
+      },
+      {
+        title: "2. Performance optimization: ",
+        intro:
+          "I have been learning front-end programming from many resources on the Internet. I am aware of my shortcomings when it comes to coding. Sometimes, I learn from ChatGPT by asking it to improve my code.",
+      },
+      {
+        title: "3. Troubleshooting: ",
+        intro:
+          "This is by far my greatest challenge. During development, I faced plenty of problems but was able to overcome them with the help of Stack Overflow, GitHub, CSS-Tricks, ChatGPT, etc. Nowadays, as technology progresses, I have adapted to learn not only from teachers but also from artificial intelligence, which is also a very efficient learning resource. ",
+      },
+    ],
     problem: [
       "From building this website, I have learned to practice the following skills: ",
       "1. Competitor Analysis: In the early stages of development, when I was exploring ways to make my design come true, I visited others' websites and utilized development tools to learn from them.",
@@ -100,6 +147,20 @@ const data = [
       "With my foray into Data Science using Python, I developed a dedicated program that not only resolved this grouping issue for myself but also addressed the needs of fellow researchers. Subsequently, as my proficiency in Python improved, I developed a GUI for the application and distributed the executable file to my peers, helping them with their research and bringing a sense of fulfillment and success to myself.",
     ],
     img1: grouper1,
+    problem_intro:
+      "During the process of creating this program, I have learned and improved upon the following skills:",
+    problems: [
+      {
+        title: "1. Data type usage: ",
+        intro:
+          'I learned to utilize different datatypes for different purposes: Use "nparray" for performing numerical computations (scientific and technical operations);  use "list" for array-like operations.',
+      },
+      {
+        title: "2. Geometry managers: ",
+        intro:
+          "Choosing and effectively using the right manager, like pack, grid, or place, can be a perplexing task for individuals without specific technical expertise. Each of these managers offers its own method for arranging widgets, which I familiarized through practical experience.",
+      },
+    ],
     problem: [
       "During the process of creating this program, I have learned and improved upon the following skills:",
       '1. Data type usage: I learned to utilize different datatypes for different purposes: Use "nparray" for performing numerical computations (scientific and technical operations);  use "list" for array-like operations.',
@@ -121,6 +182,20 @@ const data = [
       "My personal experience involves deploying this API to systematically categorize an extensive collection of photos stored within my legacy drive. The efficiency and accuracy achieved through this application are truly noteworthy, akin to the convenience we experience with modern smartphones.",
     ],
     img1: google1,
+    problem_intro:
+      "During the process of creating this program, I have learned to practice the following skills: ",
+    problems: [
+      {
+        title: "1. API Versions: ",
+        intro:
+          "I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve the desired functionality.",
+      },
+      {
+        title: "2. Debugging: ",
+        intro:
+          'I encountered an error labeled "Bad image data," which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
+      },
+    ],
     problem: [
       "During the process of creating this program, I have learned to practice the following skills: ",
       "1. API Versions: I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve the desired functionality.",
@@ -142,22 +217,26 @@ const cardPos = [
     transform: "translate(-140%, -70%) scale(0.8)",
     zIndex: "1",
     filter: "blur(8px)",
+    cursor: "e-resize",
   },
   {
     transform: "translate(-100%, -70%) scale(0.9)",
     zIndex: "2",
     filter: "blur(4px)",
+    cursor: "e-resize",
   },
   { transform: "translate(-50%, -70%) scale(1)", zIndex: "3" },
   {
     transform: "translate(0%, -70%) scale(0.9)",
     zIndex: "2",
     filter: "blur(4px)",
+    cursor: "w-resize",
   },
   {
     transform: "translate(40%, -70%) scale(0.8)",
     zIndex: "1",
     filter: "blur(8px)",
+    cursor: "w-resize",
   },
 ];
 
@@ -319,6 +398,12 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
+              <div className="project_link">
+                <h2>Ckeck out my code on</h2>{" "}
+                <a href={card.github} target="_blank" rel="noreferrer">
+                  Github
+                </a>
+              </div>
               <div className="project_description_title">INTRODUCTION</div>
               <img src={card.img1} alt="" className="project_img1" />
               <div className="description_text">
@@ -333,15 +418,16 @@ const Projects = () => {
               </div>
               <img src={card.img2} alt="" className="project_img2" />
               <div className="problem_text">
-                {card.problem.map((item, index) => (
-                  <p key={index + 1}>{item}</p>
+                <p>{card.problem_intro}</p>
+                {card.problems.map((item, index) => (
+                  <p key={index + 1}>
+                    <span>{item.title}</span>
+                    {item.intro}
+                  </p>
                 ))}
-              </div>
-              <div className="project_link">
-                <h2>Ckeck out my code on</h2>{" "}
-                <a href={card.github} target="_blank" rel="noreferrer">
-                  Github
-                </a>
+                {/* {card.problem.map((item, index) => (
+                  <p key={index + 1}>{item}</p>
+                ))} */}
               </div>
             </div>
           </div>
