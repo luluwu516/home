@@ -6,26 +6,30 @@ import stand from "../assets/images/spritesheets/stand.png";
 import sayHi from "../assets/images/spritesheets/sayHi.png";
 import signInfo from "../assets/images/spritesheets/signInfo.png";
 import mailboxInfo from "../assets/images/spritesheets/mailboxInfo.png";
-import treasureInfo from "../assets/images/spritesheets/treasureInfo.png";
+import laptopInfo from "../assets/images/spritesheets/laptop.png";
 
 const spritesheet = {
-  home: [sayHi, treasureInfo, signInfo, mailboxInfo, sayHi],
-  about: [sayHi, sayHi, sayHi],
-  projects: [sayHi, signInfo, sayHi, sayHi],
+  home: [sayHi, laptopInfo, signInfo, mailboxInfo, sayHi],
+  about: [sayHi, signInfo],
+  projects: [sayHi, sayHi, signInfo, sayHi],
 };
 
 const dialogs = {
   home: [
     "Hello! I am Yi-Lu Wu. You can call me Lulu.",
-    "Click on the chest to know more ABOUT me.",
-    "Follow the sign to see my PROJECTS.",
+    "Check on the laptop to know more ABOUT me.",
+    "Click the sign to see my PROJECTS.",
     "You can CONTACT me with that mailbox.",
     "Welcome to my website!",
   ],
+  about: [
+    "Thank you for learning more about me.",
+    "Let's take a look on my side projects!",
+  ],
   projects: [
     "Here is my App Ranch.",
-    "My paw friends will take you to my works.",
-    "Click on the center card to see my projects.",
+    "Click on the center card to see my side projects.",
+    "Open the chests to find my works.",
     "I hope you enjoy them.",
   ],
 };
@@ -63,7 +67,7 @@ const Character = ({ page, isPlaying, index, subIndex, setSubIndex }) => {
   }, [handleDialogAnimation]);
 
   return (
-    <div className="char_container">
+    <div className="char-container">
       <Spritesheet
         className="character"
         image={action}
@@ -74,9 +78,15 @@ const Character = ({ page, isPlaying, index, subIndex, setSubIndex }) => {
         loop={true}
       />
       <div
-        className="dialog"
+        className="char-dialog"
         style={isPlaying ? { display: "inline-block" } : { display: "none" }}
-      >{`${dialogs[page][index].substring(0, subIndex)}`}</div>
+      >
+        <div className="char-dialog-text">{`${dialogs[page][index].substring(
+          0,
+          subIndex
+        )}`}</div>
+        <div className="char-dialog-next">NEXT</div>
+      </div>
     </div>
   );
 };

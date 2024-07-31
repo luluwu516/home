@@ -91,10 +91,11 @@ const Experience = () => {
             {i === 2 ? (
               <li className="timeline-milestone">
                 <div className="timeline-milestone-info">
-                  After analyzing bio-information data and spending more than 1
-                  hour grouping experimental piglets, I started learning to
-                  program, fell in love with the computer world, and decided to
-                  dive in more.
+                  In 2022, after experimenting with R to visualize
+                  bio-informatic data, I learned how helpful programming could
+                  be as a tool. Since then, I have been learning other
+                  programming languages, and decided to dive in more into the
+                  computer world.
                 </div>
                 <img
                   src={exp}

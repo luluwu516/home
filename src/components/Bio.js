@@ -23,6 +23,24 @@ import figma from "../assets/images/about/skills/figma.png";
 import mongo from "../assets/images/about/skills/mongo.png";
 import node from "../assets/images/about/skills/node.png";
 
+const bio_info =
+  "Hello! My name is Lulu. I am a software engineer with a background in Animal Science. I have been programming for about 3 years now. I am passionate about exploring new technologies and utilizing my skills to solve problems in practical scenarios. I aim to apply my expertise and creativity to provide innovative solutions to real-world challenges.";
+
+const abilities = [
+  {
+    name: "Continuous Learning",
+    info: "I stay updated with industry trends and technologies and learn new skills continuously. After learning programming languages, I not only created apps but also built an IoT water system for my plants to avoid bothering friends when I was in Taiwan.",
+  },
+  {
+    name: "Adaptability",
+    info: "Adaptability is one of my core strengths, enabling me to thrive in dynamic environments and easily tackle diverse challenges, such as relocating from Taiwan to America and transitioning from Animal Science to Computer Science.",
+  },
+  {
+    name: "Teamwork",
+    info: "As a volleyball player, I learned how teamwork ensures seamless collaboration, driving teams or projects to success.",
+  },
+];
+
 const skills = [
   { img: c, name: "C" },
   { img: cPlus, name: "C++" },
@@ -44,17 +62,12 @@ const skills = [
   { img: blender, name: "Blender" },
   { img: googleCloud, name: "Google Cloud" },
   { img: aws, name: "AWS" },
-  { img: chip, name: "Development Board" },
+  { img: chip, name: "Microcontrollers" },
 ];
 
 const Bio = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [tabNum, setTabNum] = useState(1);
-  const [buttonHovered, setButtonHovered] = useState(false);
-
-  const handleButtonHover = (hovered) => {
-    setButtonHovered(hovered);
-  };
 
   const handleMouseMove = (e) => {
     const boundingRect = e.currentTarget.getBoundingClientRect();
@@ -67,153 +80,98 @@ const Bio = () => {
     setTabNum(tabNum);
   };
 
-  const mouseHoverStyles = {
-    isHovered: {
-      left: cursorPosition.x,
-      top: cursorPosition.y,
-      transform: "scale(2) translateY(0)",
-      filter: "blur(8px)",
-    },
-    isNotHovered: {
-      left: cursorPosition.x,
-      top: cursorPosition.y,
-      transform: "scale(1) translateY(-50%)",
-    },
-  };
-
-  const mouseItemStyles = {
-    itemIsHovered: {
-      transform: "translate(0% 0%)",
-    },
-    itemIsNotHovered: {
-      transform: "translate(-50% -50%)",
-    },
-  };
-
   return (
-    <div className="bio_container">
-      <div className="bio_browser" onMouseMove={handleMouseMove}>
+    <div className="bio-container">
+      <div className="bio-browser" onMouseMove={handleMouseMove}>
         <div
-          className="bio_browser_mouse"
-          style={
-            buttonHovered
-              ? mouseHoverStyles.isHovered
-              : mouseHoverStyles.isNotHovered
-          }
-        >
-          <div
-            className="bio_browser_mouse_item"
-            style={
-              buttonHovered
-                ? mouseItemStyles.itemIsHovered
-                : mouseItemStyles.itemIsNotHovered
-            }
-          ></div>
-        </div>
-        <div className="bio_browser_tabs">
+          className="bio-browser-mouse"
+          style={{ left: cursorPosition.x, top: cursorPosition.y }}
+        ></div>
+        <div className="bio-browser-tabs">
           <div
             onClick={() => clickHandler(1)}
             className={
-              tabNum === 1 ? "bio_browser_tab active" : "bio_browser_tab"
+              tabNum === 1 ? "bio-browser-tab active" : "bio-browser-tab"
             }
-            onMouseEnter={() => handleButtonHover(true)}
-            onMouseLeave={() => handleButtonHover(false)}
           >
             Who I am
           </div>
           <div
             onClick={() => clickHandler(2)}
             className={
-              tabNum === 2 ? "bio_browser_tab active" : "bio_browser_tab"
+              tabNum === 2 ? "bio-browser-tab active" : "bio-browser-tab"
             }
-            onMouseEnter={() => handleButtonHover(true)}
-            onMouseLeave={() => handleButtonHover(false)}
           >
             What I can do
           </div>
           <div
             onClick={() => clickHandler(3)}
             className={
-              tabNum === 3 ? "bio_browser_tab active" : "bio_browser_tab"
+              tabNum === 3 ? "bio-browser-tab active" : "bio-browser-tab"
             }
-            onMouseEnter={() => handleButtonHover(true)}
-            onMouseLeave={() => handleButtonHover(false)}
           >
             What makes me effective
           </div>
         </div>
-        <div className="bio_browser_windows">
-          <div className={"bio_browser_window" + (tabNum === 1 ? " open" : "")}>
-            <div className="bio_photo">
+        <div className="bio-browser-windows">
+          <div
+            className={
+              "bio-browser-window bio-browser-window1" +
+              (tabNum === 1 ? " open" : "")
+            }
+          >
+            <div className="bio-photo">
               <img
                 src={profile_photo}
                 alt="Yi-Lu Wu"
-                className="bio_photo_img"
+                className="bio-photo-img"
               />
             </div>
-            <div className="bio_info">
-              <h1 className="bio_info_name">Yi-Lu Wu</h1>
-              <div className="bio_info_content">
-                Hello! My name is Lulu. I am a software engineer with a
-                background in Animal Science. I have been programming for about
-                3 years now. I am passionate about problem-solving, exploring,
-                and utilizing new technologies in practical scenarios. I aim to
-                apply my expertise and creativity to provide innovative
-                solutions to real-world challenges.
-              </div>
+            <div className="bio-info">
+              <h1 className="bio-info-name">Yi-Lu Wu</h1>
+              <div className="bio-info-content">{bio_info}</div>
             </div>
           </div>
           <div
             className={
-              "bio_browser_window bio_browser_window2" +
+              "bio-browser-window bio-browser-window2" +
               (tabNum === 2 ? " open" : "")
             }
           >
-            <h2>Some technologies I've worked with: </h2>
-            <div className="skills">
+            <h2>My Toolbox: </h2>
+            <div className="bio-skills">
               {skills.map((skill, i) => (
-                <div className="skill" key={i}>
-                  <img src={skill.img} alt={skill.name} className="skill_img" />
-                  <div className="skill_name">{skill.name}</div>
+                <div className="bio-skill" key={i}>
+                  <img
+                    src={skill.img}
+                    alt={skill.name}
+                    className="bio-skill-img"
+                  />
+                  <div className="bio-skill-name">{skill.name}</div>
                 </div>
               ))}
             </div>
           </div>
-          <div className={"bio_browser_window" + (tabNum === 3 ? " open" : "")}>
-            <div className="abilities">
-              <div className="ability">
-                <div className="ability_name">Teamwork</div>
-                <div className="ability_info">
-                  As a volleyball player, I learned how teamwork ensures
-                  seamless collaboration, driving teams or projects forward with
-                  collective expertise.
+          <div
+            className={
+              "bio-browser-window bio-browser-window3" +
+              (tabNum === 3 ? " open" : "")
+            }
+          >
+            <div className="bio-abilities">
+              {abilities.map((ability, i) => (
+                <div className="bio-ability" key={i}>
+                  <div className="bio-ability-name">{ability.name}</div>
+                  <div className="bio-ability-info">{ability.info}</div>
                 </div>
-              </div>
-              <div className="ability">
-                <div className="ability_name">Adaptability</div>
-                <div className="ability_info">
-                  Adaptability is one of my core strengths, enabling me to
-                  thrive in dynamic environments and easily tackle diverse
-                  challenges, such as from Taiwan to America and from Anima
-                  Science to Computer Science.
-                </div>
-              </div>
-              <div className="ability">
-                <div className="ability_name">Continuous Learning</div>
-                <div className="ability_info">
-                  I stay updated with industry trends and technologies and learn
-                  new skills continuously. For instance, after I learned a
-                  programming language, I built an IoT water system for my
-                  plants to avoid bothering friends when I was in Taiwan.
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="bio_img">
-        <div className="bio_img_light"></div>
-        <div className="bio_img_working"></div>
+      <div className="bio-img">
+        <div className="bio-img-light"></div>
+        <div className="bio-img-working"></div>
       </div>
     </div>
   );

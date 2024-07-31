@@ -12,7 +12,7 @@ import photography from "../assets/images/hobbies/photography.jpg";
 const hobbies = [
   { img: blender, alternate_text: "Blender", title: "3D Modelling" },
   { img: brandDesign, alternate_text: "Brand Design", title: "Package Design" },
-  { img: esp32, alternate_text: "Light Sensor", title: "ESP32 Development" },
+  { img: esp32, alternate_text: "Light Sensor", title: "Microcontroller" },
   {
     img: gameDevelopment,
     alternate_text: "Zolleyball",
@@ -32,28 +32,26 @@ const hobbies = [
 
 const Hobby = () => {
   return (
-    <div className="hobbies_container">
-      <div className="hobbies_container_inner">
+    <div className="hobbies-container">
+      <div className="hobbies-container-inner">
         {hobbies.map((hobby, i) => (
-          <div className="hobby_card" key={i}>
+          <div className="hobby-card" key={i}>
             <img
               src={hobby.img}
               alt={hobby.alternate_text}
-              className="hobby_img"
+              className="hobby-img"
             />
-            <h3 className="hobby_title">{hobby.title}</h3>
+            <h3 className="hobby-title">{hobby.title}</h3>
           </div>
         ))}
-      </div>
-      <div className="hobbies_container_inner">
         {hobbies.map((hobby, i) => (
-          <div className="hobby_card" key={i}>
+          <div className="hobby-card" key={i}>
             <img
               src={hobby.img}
               alt={hobby.alternate_text}
-              className="hobby_img"
+              className="hobby-img"
             />
-            <h3 className="hobby_title">{hobby.title}</h3>
+            <h3 className="hobby-title">{hobby.title}</h3>
           </div>
         ))}
       </div>

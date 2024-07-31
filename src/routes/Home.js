@@ -2,22 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Character from "../components/Character";
 
-const text = ["Web Developer", "Computer Programmer", "Software Engineer"];
-const textInfo = [
-  "who creates and maintains websites.",
-  "who engineers and maintains softwares.",
-  "who writes and develops application programs.",
-];
+const breakpoint_phone = 414;
+const text_info = "who develops and maintains application programs.";
+
+const text = ["Web Developer", "Game Developer", "Software Engineer"];
 
 const dialogs = [
   "Hello! I am Yi-Lu Wu. You can call me Lulu.",
-  "Click on the chest to know more ABOUT me.",
-  "Follow the sign to see my PROJECTS.",
+  "Check on the laptop to know more ABOUT me.",
+  "Click the sign to see my PROJECTS.",
   "You can CONTACT me with that mailbox.",
   "Welcome to my website!",
 ];
 
 const Home = () => {
+  const view_width = window.innerWidth;
   // introducing
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -31,7 +30,7 @@ const Home = () => {
   const [dialogIndex, setDialogIndex] = useState(0);
   const [dialogSubIndex, setDialogSubIndex] = useState(0);
 
-  const clickHandler = (event) => {
+  const clickHandler = () => {
     if (isPlaying) {
       if (
         dialogSubIndex === dialogs[dialogIndex].length &&
@@ -94,7 +93,7 @@ const Home = () => {
           <b>
             {` ${text[index].substring(0, subIndex)}${blink ? "|" : "  "}`}{" "}
           </b>
-          <div>{`${textInfo[index]}`}</div>
+          <div>{`${text_info}`}</div>
         </h2>
       </div>
       <div
@@ -116,23 +115,30 @@ const Home = () => {
         <i className={isPlaying ? "fas fa-stop" : "fas fa-play"}></i>
         <div className="middle_text">{isPlaying ? "STOP" : "PLAY"} </div>
       </div>
-      <div className="bottom">
-        <Link to="/contact" className="bottom_item">
-          <div className="bottom_mailbox">
-            <div className="bottom_mailbox_mail"></div>
-          </div>
-        </Link>
-        <Link to="/about" className="bottom_item">
-          <div className="bottom_treasure">
-            <div className="bottom_treasure_light"></div>
-            <div className="bottom_treasure_treasureBox"></div>
-          </div>
-        </Link>
-        <Link to="/projects" className="bottom_item">
-          <div className="bottom_sign"></div>
-        </Link>
-      </div>
-
+      {view_width < breakpoint_phone ? (
+        <div className="bottom-phone">
+          <Link to="/about" className="bottom-phone_button">
+            Learn more About me!
+          </Link>
+        </div>
+      ) : (
+        <div className="bottom">
+          <Link to="/contact" className="bottom_item">
+            <div className="bottom_mailbox">
+              <div className="bottom_mailbox_mail"></div>
+            </div>
+          </Link>
+          <Link to="/about" className="bottom_item">
+            <div className="bottom_desk">
+              <div className="bottom_desk_light"></div>
+              <div className="bottom_desk_img"></div>
+            </div>
+          </Link>
+          <Link to="/projects" className="bottom_item">
+            <div className="bottom_sign"></div>
+          </Link>
+        </div>
+      )}
       <Character
         page="home"
         isPlaying={isPlaying}

@@ -1,45 +1,85 @@
-.char_container {
+.char-container {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
   z-index: 99;
-  transition: 1s linear;
-  .character {
-    width: 144px;
-    height: 192px;
+  .char-dialog {
+    position: absolute;
+    width: 120%;
+    left: 110%;
+    top: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+.char-dialog {
+  .char-dialog-text {
+    background-color: #fff;
+    min-height: 2.4rem;
+    box-shadow: $box-shadow;
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: $dark-text;
+    font-size: 1.1rem;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: -10px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 20px solid #fff;
+    }
+  }
+  .char-dialog-next {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-left: 6px;
+      background-image: url("../assets/images/mouse-dark.svg");
+      background-size: cover;
+      background-position: 0 0;
+      animation: clicking 2s steps(2) infinite;
+    }
   }
 }
 
-.dialog {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 110%;
-  min-height: 56px;
-  background-color: #fff;
-  box-shadow: 2px 2px 4px 2px rgba(#333, 0.5);
-  border-radius: 6px;
-  padding: 12px 16px;
-  color: #000;
-  font-weight: 600;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: -10px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 20px solid #fff;
+/*-----  Keyframes -----*/
+@keyframes clicking {
+  0% {
+    transform: translateY(10%);
+    background-position: 0 0;
+  }
+  100% {
+    transform: translateY(20%);
+    background-position: -32px 0;
   }
 }
-@media screen and (max-width: $break_phone) {
-  .dialog {
+
+/*-----  Media Screen -----*/
+@media screen and (max-width: $break-pad) {
+  .char-dialog {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: $break-phone) {
+  .char-dialog {
     top: -10%;
     width: 72%;
   }
-  .char_container {
-    display: none;
-  }
+  // .char-container {
+  //   display: none;
+  // }
 }
+// @media screen and (max-width: $break-pad) and (max-height: $break-height) {
+//   .char-container {
+//     display: none;
+//   }
+// }

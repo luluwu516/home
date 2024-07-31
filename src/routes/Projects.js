@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Character from "../components/Character";
 
-import dog1 from "../assets/images/projects/dog1.png";
-import dog2 from "../assets/images/projects/dog2.png";
-import dog3 from "../assets/images/projects/dog3.png";
-
 import website from "../assets/images/projects/portfolio/website.png";
 import website_open from "../assets/images/projects/portfolio/website_open.png";
 import website1 from "../assets/images/projects/portfolio/website1.png";
@@ -35,27 +31,22 @@ const data = [
     alt: "AI Copywriter",
     github: "https://github.com/luluwu516/ai_copywriter",
     description: [
-      "Powered by OpenAI's advanced GPT-3.5 model, this program empowers users to craft captivating copy for various social media platforms effortlessly. This Streamlit website eliminates the complexities of content origination with unrivaled convenience. Experience the new AI technology by simply clicking the button in the AI Copywriter program through the Streamlit interface.",
+      "Powered by OpenAI's advanced GPT-3.5 model, this program empowers users to craft captivating copies for various social media platforms effortlessly. This Streamlit website eliminates the complexities of content origination. Experience the new AI technology by simply clicking the button in the AI Copywriter program through the Streamlit interface.",
     ],
     img1: streamlit1,
     problem_intro:
       "During the process of creating this program, I have learned and improved upon the following skills:",
     problems: [
       {
-        title: "1. Accurate Prompts: ",
+        title: "1. Generating Accurate Prompts: ",
         intro:
-          "Well-designed prompts have the potential to significantly enhance the precision and logical flow of the generated text. It will be more accurate if we give it a role, define the goal, format the result, and set restrictions if needed.",
+          "Well-designed prompts have the potential to significantly enhance the precision and logical flow of the generated text. The model will be more accurate if we give it a role, define the goal, format the result, and set restrictions if needed.",
       },
       {
-        title: "2. Imported library: ",
+        title: "2. Utilizing Imported Library: ",
         intro:
           "OpenAI and Streamlit are third-party libraries, which means they are not built into the Python programming language. To use these libraries, we need to follow their documentation and guidelines to utilize their features effectively. Both of these libraries are essential tools that simplify various aspects of software development.",
       },
-    ],
-    problem: [
-      "During the process of creating this program, I have learned and improved upon the following skills:",
-      "1. Accurate Prompts: Well-designed prompts have the potential to significantly enhance the precision and logical flow of the generated text. It will be more accurate if we give it a role, define the goal, format the result, and set restrictions if needed.",
-      "2. Imported library: OpenAI and Streamlit are third-party libraries, which means they are not built into the Python programming language. To use these libraries, we need to follow their documentation and guidelines to utilize their features effectively. Both of these libraries are essential tools that simplify various aspects of software development.",
     ],
     img2: streamlit2,
     skills: ["Python", "Streamlit", "OpenAI"],
@@ -68,12 +59,12 @@ const data = [
     alt: "The Volleyball Game",
     github: "https://github.com/luluwu516/volleyball_game",
     description: [
-      "Utilizing Pygame, I developed a volleyball minigame incorporating basic concepts introduced in Pygame's tutorial and insights from the official documentation. The game challenges players to try catching as many balls as they can, putting their reflexes and agility to the test.",
+      "Utilizing Pygame, I developed a volleyball minigame incorporating basic concepts introduced in Pygame's tutorial and insights from it's official documents. The game challenges players to catch as many balls as they can, putting their reflexes and agility to the test.",
       "This project stands as one of my first independently developed games and a stepping stone. I am in the process of designing a comprehensive gaming experience reminiscent of classic titles, including diverse characters, stages, modes, and even two-player features. Stayed tuned!",
     ],
     img1: zoolleyball1,
     problem_intro:
-      "From building this game, I have learned to practice the following skills: ",
+      "From building this game, I have become more familiarized in the following areas:",
     problems: [
       {
         title: "1. Mathematical Simulation: ",
@@ -86,11 +77,6 @@ const data = [
           "During the development of the game, I learned more about data structures through online platforms like YouTube. Then, I strategically incorporated numerous features, such as Stack and Array, utilizing data structures, which enabled me to enhance the performance of the program significantly. This approach was imperative to prevent the program from becoming overly complex. ",
       },
     ],
-    problem: [
-      "From building this game, I have learned to practice the following skills: ",
-      "1. Mathematical Simulation: I utilized fundamental mathematical formulas to simulate the physics within the game, creating an environment where items move naturally, including the effect of gravity.",
-      "2. Data Structure: During the development of the game, I learned more about data structures through online platforms like YouTube. Then, I strategically incorporated numerous features, such as Stack and Array, utilizing data structures, which enabled me to enhance the performance of the program significantly. This approach was imperative to prevent the program from becoming overly complex. ",
-    ],
     img2: zoolleyball2,
     skills: ["Python", "pygame"],
   },
@@ -102,13 +88,13 @@ const data = [
     alt: "This Website!",
     github: "https://github.com/luluwu516/website",
     description: [
-      "Coding is fun and creative. I use React because its features allow me to build individual components and combine them into pages, just like LEGO!",
-      "To demonstrate my cheerful and positive personality, my website was inspired by Mario Brothers and Pixel Art designed to introduce myself like playing a game.",
-      "If you have any questions about me, feel free to contact me. I hope you have a great time exploring my website!",
+      "Coding is fun and requires creativity. I use React because its features allow me to build individual components and combine them into pages, just like LEGO!",
+      "To demonstrate my cheerful and positive personality, my website was inspired by Mario Brothers, designed to introduce myself like playing a game.",
+      "If you have any questions for me, feel free to contact me. I hope you have a great time exploring my website!",
     ],
     img1: website1,
     problem_intro:
-      "From building this website, I have learned to practice the following skills: ",
+      "Through building this website, I have improved on the following skills: ",
     problems: [
       {
         title: "1. Competitor Analysis: ",
@@ -126,12 +112,6 @@ const data = [
           "This is by far my greatest challenge. During development, I faced plenty of problems but was able to overcome them with the help of Stack Overflow, GitHub, CSS-Tricks, ChatGPT, etc. Nowadays, as technology progresses, I have adapted to learn not only from teachers but also from artificial intelligence, which is also a very efficient learning resource. ",
       },
     ],
-    problem: [
-      "From building this website, I have learned to practice the following skills: ",
-      "1. Competitor Analysis: In the early stages of development, when I was exploring ways to make my design come true, I visited others' websites and utilized development tools to learn from them.",
-      "2. Performance optimization: I have been learning front-end programming from many resources on the Internet. I am aware of my shortcomings when it comes to coding. Sometimes, I learn from ChatGPT by asking it to improve my code.",
-      "3. Troubleshooting: This is by far my greatest challenge. During development, I faced plenty of problems but was able to overcome them with the help of Stack Overflow, GitHub, CSS-Tricks, ChatGPT, etc. Nowadays, as technology progresses, I have adapted to learn not only from teachers but also from artificial intelligence, which is also a very efficient learning resource. ",
-    ],
     img2: website2,
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "React"],
   },
@@ -143,8 +123,8 @@ const data = [
     alt: "Animal Grouper",
     github: "https://github.com/luluwu516/GUI_animal_grouper",
     description: [
-      "This application employs a graphical user interface (GUI) designed for the purpose of grouping experimental animals. As a researcher, I initially faced challenges in piglet grouping due to weight disparities, prompting the need for time-consuming adjustments.",
-      "With my foray into Data Science using Python, I developed a dedicated program that not only resolved this grouping issue for myself but also addressed the needs of fellow researchers. Subsequently, as my proficiency in Python improved, I developed a GUI for the application and distributed the executable file to my peers, helping them with their research and bringing a sense of fulfillment and success to myself.",
+      "This application employs a graphical user interface (GUI) designed for grouping experimental animals. As a researcher, I initially faced time-consuming challenges in grouping piglets due to weight disparities, prompting the need for adjustments.",
+      "With Python, I developed a dedicated program that not only resolved this grouping issue for myself but also addressed the needs of my fellow researchers. Subsequently, as my proficiency in Python improved, I developed a GUI and Streamlit website for the application and distributed the executable file to my peers, helping them with their research.",
     ],
     img1: grouper1,
     problem_intro:
@@ -161,13 +141,8 @@ const data = [
           "Choosing and effectively using the right manager, like pack, grid, or place, can be a perplexing task for individuals without specific technical expertise. Each of these managers offers its own method for arranging widgets, which I familiarized through practical experience.",
       },
     ],
-    problem: [
-      "During the process of creating this program, I have learned and improved upon the following skills:",
-      '1. Data type usage: I learned to utilize different datatypes for different purposes: Use "nparray" for performing numerical computations (scientific and technical operations);  use "list" for array-like operations.',
-      "2. Geometry managers: Choosing and effectively using the right manager, like pack, grid, or place, can be a perplexing task for individuals without specific technical expertise. Each of these managers offers its own method for arranging widgets, which I familiarized through practical experience.",
-    ],
     img2: grouper2,
-    skills: ["Python"],
+    skills: ["Python", "Streamlit"],
   },
   {
     id: 5,
@@ -177,39 +152,52 @@ const data = [
     alt: "Vision AI Categorizer",
     github: "https://github.com/luluwu516/VisionAI_demo",
     description: [
-      "This application leverages the capabilities of the Vision API to analyze and categorize images, subsequently generating classifications. These outcomes are then exported into an Excel format using Java.",
-      "Google Cloud Vision AI is a robust machine learning solution within the Google Cloud Platform (GCP) portfolio. It empowers developers to integrate advanced visual functionalities into their applications seamlessly.",
+      "This application utilizes Vision API to analyze and categorize images to generate classifications, which are then exported into an Excel file using Java.",
+      "Google Cloud Vision AI is a robust machine learning solution in the Google Cloud Platform (GCP) portfolio. It empowers developers to integrate advanced visual functionalities into their applications.",
       "My personal experience involves deploying this API to systematically categorize an extensive collection of photos stored within my legacy drive. The efficiency and accuracy achieved through this application are truly noteworthy, akin to the convenience we experience with modern smartphones.",
     ],
     img1: google1,
     problem_intro:
-      "During the process of creating this program, I have learned to practice the following skills: ",
+      "During the process of creating this program, I practiced the following skills: ",
     problems: [
       {
         title: "1. API Versions: ",
         intro:
-          "I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve the desired functionality.",
+          "I became proficient with Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted current techniques to achieve the desired functionality of my application.",
       },
       {
         title: "2. Debugging: ",
         intro:
-          'I encountered an error labeled "Bad image data," which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
+          'I encountered a "Bad image data" error, which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
       },
-    ],
-    problem: [
-      "During the process of creating this program, I have learned to practice the following skills: ",
-      "1. API Versions: I became more proficient in Java through an online course established in 2017. However, certain techniques taught were outdated. Upon thorough review of Google's documentation, I successfully updated and adapted these techniques to achieve the desired functionality.",
-      '2. Debugging: I encountered an error labeled "Bad image data," which I effectively resolved through the debugging process —— printing out the variable. This issue originated from a concealed ".DS_store" file. To address this, I developed a dedicated function that both excludes the ".DS_store" file and rectifies the error.',
     ],
     img2: google2,
     skills: ["Java", "Google Cloud"],
   },
 ];
 
+const works = [
+  {
+    name: "Sticker",
+    link: "https://store.line.me/stickershop/product/1350843/en?ref=Desktop",
+    icon_className: "fab fa-line",
+  },
+  {
+    name: "Notion",
+    link: "https://luluwu.simple.ink",
+    icon_className: "far fa-sticky-note",
+  },
+  {
+    name: "CodePen",
+    link: "https://codepen.io/luluwu",
+    icon_className: "fab fa-codepen",
+  },
+];
+
 const dialogs = [
   "Here is my App Ranch.",
-  "My paw friends will take you to my works.",
-  "Click on the center card to see my projects.",
+  "Click on the center card to see my side projects.",
+  "Open the chests to find my works.",
   "I hope you enjoy them.",
 ];
 const cardPos = [
@@ -241,7 +229,6 @@ const cardPos = [
 ];
 
 const Projects = () => {
-  const view_width = window.innerWidth;
   // Character Dialogs
   const [isPlaying, setIsPlaying] = useState(false);
   const [dialogIndex, setDialogIndex] = useState(0);
@@ -250,8 +237,6 @@ const Projects = () => {
   // Slide Index
   const [position, setPosition] = useState(0);
   const [open, setOpen] = useState(false);
-
-  const [itemPos, setItemPos] = useState({ x: window.innerWidth / 2, y: 0 });
 
   const handleCardClick = (index) => {
     if ((position + index) % data.length === Math.floor(data.length / 2)) {
@@ -266,7 +251,6 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => setItemPos({ x: 144, y: 0 }), 1000);
     setTimeout(() => setIsPlaying(true), 3000);
   }, []);
 
@@ -297,7 +281,7 @@ const Projects = () => {
     const scroll = e.scrollTop;
 
     const description_titles = document.querySelectorAll(
-      ".project_description_title"
+      ".project-description-title"
     );
     description_titles.forEach((info_title) => {
       if (scroll > 100) {
@@ -306,7 +290,7 @@ const Projects = () => {
         info_title.classList.remove("show");
       }
     });
-    const description_texts = document.querySelectorAll(".description_text");
+    const description_texts = document.querySelectorAll(".description-text");
     description_texts.forEach((info_text) => {
       if (scroll > 600) {
         info_text.classList.add("show");
@@ -330,7 +314,7 @@ const Projects = () => {
         info_text.classList.remove("zoom");
       }
     });
-    const problem_text = document.querySelectorAll(".problem_text");
+    const problem_text = document.querySelectorAll(".problem-text");
     problem_text.forEach((info_text) => {
       if (scroll > 1400) {
         info_text.classList.add("show");
@@ -342,9 +326,9 @@ const Projects = () => {
 
   return (
     <div className="projects" onClick={clickHandler}>
-      <div className="projects_cards">
+      <div className="projects-cards">
         <div
-          className="card_open_closeBtn"
+          className="card-open-closeBtn"
           style={open ? { display: "inline-block" } : { display: "None" }}
           onClick={() => setOpen(false)}
         >
@@ -355,7 +339,7 @@ const Projects = () => {
             className={
               (position + card.id - 1) % data.length ===
                 Math.floor(data.length / 2) && open
-                ? "card card_open"
+                ? "card card-open"
                 : "card"
             }
             id={`card${card.id}`}
@@ -374,50 +358,50 @@ const Projects = () => {
             <img
               src={open ? card.open_img : card.img}
               alt={card.alt}
-              className="card_cover"
+              className="card-cover"
             />
-            <div className="card_title">{card.name}</div>
-            <div className="card_title_marquee">
-              <div className="card_title_marquee_inner" aria-hidden="true">
-                <span>{card.name}</span>
-                <span>{card.name}</span>
-                <span>{card.name}</span>
-                <span>{card.name}</span>
-                <span>{card.name}</span>
+            <div className="card-title">{card.name}</div>
+            <div className="card-title-marquee">
+              <div className="card-title-marquee-inner" aria-hidden="true">
+                <span>{card.name} </span>
+                <span>{card.name} </span>
+                <span>{card.name} </span>
+                <span>{card.name} </span>
+                <span>{card.name} </span>
               </div>
             </div>
 
             <div
-              className="card_open_info"
+              className="card-open-info"
               style={open ? { height: "auto" } : { display: "None" }}
             >
-              <div className="project_skills">
+              <div className="project-skills">
                 {card.skills.map((item, index) => (
-                  <div className="project_skill" key={index}>
+                  <div className="project-skill" key={index}>
                     {item}
                   </div>
                 ))}
               </div>
-              <div className="project_link">
+              <div className="project-link">
                 <h2>Ckeck out my code on</h2>{" "}
                 <a href={card.github} target="_blank" rel="noreferrer">
-                  Github
+                  <i className="fab fa-github"></i> Github
                 </a>
               </div>
-              <div className="project_description_title">INTRODUCTION</div>
-              <img src={card.img1} alt="" className="project_img1" />
-              <div className="description_text">
+              <div className="project-description-title">INTRODUCTION</div>
+              <img src={card.img1} alt="" className="project-img1" />
+              <div className="description-text">
                 {card.description.map((item, index) => (
                   <p key={index + 1}>{item}</p>
                 ))}
               </div>
-              <div className="project_problem_title">
+              <div className="project-problem-title">
                 <span className="sliceTop">PROBLEM</span>
                 <span className="sliceBottom">PROBLEM</span>{" "}
                 <p className="solving">SOLVING</p>
               </div>
-              <img src={card.img2} alt="" className="project_img2" />
-              <div className="problem_text">
+              <img src={card.img2} alt="" className="project-img2" />
+              <div className="problem-text">
                 <p>{card.problem_intro}</p>
                 {card.problems.map((item, index) => (
                   <p key={index + 1}>
@@ -425,51 +409,35 @@ const Projects = () => {
                     {item.intro}
                   </p>
                 ))}
-                {/* {card.problem.map((item, index) => (
-                  <p key={index + 1}>{item}</p>
-                ))} */}
               </div>
             </div>
           </div>
         ))}
-        <div className="projects_works">
-          <a href="https://luluwu.simple.ink" target="_blank" rel="noreferrer">
-            <div className="project_work">
-              <i className="far fa-sticky-note"></i> Notion
-            </div>
-            <img src={dog1} alt="" />
-          </a>
-          <a href="https://codepen.io/luluwu" target="_blank" rel="noreferrer">
-            <div className="project_work">
-              <i className="fab fa-codepen"></i> CodePen
-            </div>
-            <img src={dog2} alt="" />
-          </a>
-          <a
-            href="https://store.line.me/stickershop/product/1350843/en?ref=Desktop"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="project_work">
-              <i className="fab fa-line"></i> Sticker
-            </div>
-            <img src={dog3} alt="" />
-          </a>
+        <div className="projects-works">
+          {works.map((work, i) => (
+            <a
+              className="project-treasure"
+              href={work.link}
+              target="_blank"
+              rel="noreferrer"
+              key={i}
+            >
+              <div className="project-treasure-light"></div>
+              <div className="project-treasure-box">
+                <h3>{work.name}</h3>
+                <i className={work.icon_className}></i>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
-      {view_width > 600 ? (
-        <Character
-          page="projects"
-          isPlaying={isPlaying}
-          isGaming={true}
-          itemPos={itemPos}
-          index={dialogIndex}
-          subIndex={dialogSubIndex}
-          setSubIndex={setDialogSubIndex}
-        />
-      ) : (
-        <div></div>
-      )}
+      <Character
+        page="projects"
+        isPlaying={isPlaying}
+        index={dialogIndex}
+        subIndex={dialogSubIndex}
+        setSubIndex={setDialogSubIndex}
+      />
     </div>
   );
 };

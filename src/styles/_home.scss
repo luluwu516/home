@@ -1,9 +1,9 @@
+/*----- Home -----*/
 .home {
-  height: calc(100% - 2 * $header_height);
+  height: calc(100% - 2 * #{$header-height});
   top: $header_height;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   .top {
@@ -18,16 +18,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px double rgba(255, 255, 255, 0.5);
+    border: 4px double rgba($light-text, 0.5);
     transition: 0.5s;
     &::before {
       content: attr(data-tooltip);
       position: absolute;
-      width: max-content;
       background-color: #fff5d9;
-      box-shadow: 2px 2px 4px 2px rgba(#333, 0.1);
+      box-shadow: $box-shadow;
       color: #333;
-      text-align: center;
       padding: 8px;
       border-radius: 6px;
       z-index: 1;
@@ -65,8 +63,17 @@
     justify-content: space-between;
     align-items: flex-end;
   }
+  .bottom-phone {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .char-container {
+    left: 50%;
+  }
 }
-
+/*----- top -----*/
 .top {
   h2 {
     margin: 10px 0px;
@@ -79,7 +86,7 @@
     font-size: 4rem;
   }
 }
-
+/*----- middle -----*/
 .middle {
   i {
     transition: 0.5s;
@@ -98,7 +105,7 @@
     margin-left: 1rem;
   }
 }
-
+/*----- bottom -----*/
 .bottom {
   .bottom_item {
     display: flex;
@@ -127,35 +134,32 @@
     left: 50%;
     top: 0%;
   }
-  .bottom_treasure {
+  .bottom_desk {
     cursor: pointer;
-    transform: translateX(-80%);
-    transition: 0.3s;
-    &:hover {
-      transform: translate(-80%, -10%);
-      .bottom_treasure_treasureBox {
-        background-position: right;
-      }
-      .bottom_treasure_light {
-        box-shadow: 0 0 40px 28px #ffd700;
-      }
-    }
-    .bottom_treasure_light {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      transition: 0.4s;
-    }
-    .bottom_treasure_treasureBox {
-      width: 116px;
-      height: 92px;
-      background-image: url(../assets/images/treasure.png);
+    transform: translateX(-48%);
+    .bottom_desk_img {
+      width: 200px;
+      height: 180px;
+      background-image: url(../assets/images/computerDesk.png);
       background-position: left;
       background-repeat: no-repeat;
+    }
+    .bottom_desk_light {
+      position: absolute;
+      top: 56%;
+      left: 64%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+    }
+    &:hover {
+      .bottom_desk_img {
+        background-position: right;
+      }
+      .bottom_desk_light {
+        box-shadow: 0 0 40px 28px rgba(#fff6c1, 0.5);
+      }
     }
   }
   .bottom_sign {
@@ -171,16 +175,18 @@
     }
   }
 }
-
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotateY(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotateY(360deg);
+.bottom-phone {
+  .bottom-phone_button {
+    cursor: pointer;
+    padding: 5px 15px;
+    height: max-content;
+    color: #fff;
+    text-transform: uppercase;
+    @include button-style();
   }
 }
 
+/*-----  Keyframes -----*/
 @keyframes mailup {
   from {
     top: 0%;
@@ -202,7 +208,6 @@
     transform: translate(-50%, 0) rotate(-20deg);
   }
 }
-
 @keyframes box_wave {
   0%,
   50%,
@@ -216,7 +221,6 @@
     transform: translate(-100%, -10%) rotate(-4deg);
   }
 }
-
 @keyframes sign_skew {
   0%,
   100% {
@@ -229,7 +233,8 @@
   }
 }
 
-@media screen and (max-width: $break_pad) {
+/*-----  Media Screen -----*/
+@media screen and (max-width: $break-pad) {
   .home {
     .top {
       h2 {
@@ -237,6 +242,14 @@
       }
       h1 {
         font-size: 3.2rem;
+      }
+    }
+    .middle {
+      &::before {
+        left: 124%;
+      }
+      &::after {
+        left: calc(124% - 16px);
       }
     }
     .bottom {
@@ -248,13 +261,13 @@
     }
   }
 }
-
-@media screen and (max-width: $break_phone) {
+@media screen and (max-width: $break-phone) {
   .home {
     .middle {
       display: none;
     }
     .top {
+      padding: 3vh 5vw;
       h2 {
         font-size: 1.2rem;
       }
@@ -264,10 +277,25 @@
     }
     .bottom {
       position: absolute;
-      bottom: 0px;
+      bottom: 0;
       justify-content: space-around;
-      .bottom_treasure {
-        transform: translateX(0%);
+      .bottom_desk {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+@media screen and (max-width: $break-pad) and (max-height: $break-height) {
+  .home {
+    .middle {
+      display: none;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      justify-content: space-around;
+      .bottom_desk {
+        transform: translateX(0);
       }
     }
   }
