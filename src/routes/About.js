@@ -9,10 +9,7 @@ import Bio from "../components/Bio";
 import birdFly from "../assets/images/about/sider/birdFly.png";
 import birdStand from "../assets/images/about/sider/birdStand.png";
 
-const dialogs = [
-  "Thank you for learning more about me.",
-  "Let's take a look on my side projects!",
-];
+const dialogs = ["Nice to meet you.", "Let's take a look at my side projects!"];
 
 const About = () => {
   // Character Dialogs

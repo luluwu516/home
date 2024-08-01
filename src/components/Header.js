@@ -41,6 +41,14 @@ const Header = ({ mode, setMode }) => {
         >
           <li className="nav-menu-item">CONTACT</li>
         </Link>
+        <a
+          href="https://drive.google.com/file/d/1_yzTLO0WFZc3A7SHcBmq1oUzKd9lEx8D/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          className="nav-menu-item-resume"
+        >
+          RESUME
+        </a>
       </ul>
       <div className="mode-switch">
         <label>

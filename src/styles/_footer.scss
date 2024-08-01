@@ -1,8 +1,5 @@
 /*----- Footer -----*/
 .footer {
-  // display: flex;
-  // justify-content: flex-start;
-  // align-items: flex-end;
   height: $header-height;
   position: absolute;
   bottom: 0;
@@ -17,24 +14,6 @@
   .footer-copyright {
     top: 36px;
   }
-  .footer-resume {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 5px 15px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: rgba(#eee, 0.4);
-    border-radius: 99px;
-    border: 4px double #333;
-    &:hover {
-      color: $dark-text;
-      background-color: rgba(#eee, 0.8);
-    }
-  }
-
   @media screen and (max-width: $break-phone) {
     padding: 1vh 2vw;
     font-size: 0.9em;

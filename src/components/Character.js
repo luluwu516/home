@@ -22,10 +22,7 @@ const dialogs = {
     "You can CONTACT me with that mailbox.",
     "Welcome to my website!",
   ],
-  about: [
-    "Thank you for learning more about me.",
-    "Let's take a look on my side projects!",
-  ],
+  about: ["Nice to meet you.", "Let's take a look at my side projects!"],
   projects: [
     "Here is my App Ranch.",
     "Click on the center card to see my side projects.",
