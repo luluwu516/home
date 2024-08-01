@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.ae7776f0.css",
-    "main.js": "/home/static/js/main.7734f593.js",
+    "main.css": "/home/static/css/main.3bef0d99.css",
+    "main.js": "/home/static/js/main.af50cb57.js",
     "static/media/zoolleyball1.gif": "/home/static/media/zoolleyball1.097a2ec44b8dfc381286.gif",
     "static/media/photo.png": "/home/static/media/photo.6875a7fe4c239511c06d.png",
     "static/media/google_open.png": "/home/static/media/google_open.59bc0c32cec785599057.png",
@@ -30,11 +30,11 @@
     "static/media/mouse-dark.svg": "/home/static/media/mouse-dark.007e63a8760182ccb615.svg",
     "static/media/mouse-light.svg": "/home/static/media/mouse-light.f478b5a705e7d9ca4b66.svg",
     "index.html": "/home/index.html",
-    "main.ae7776f0.css.map": "/home/static/css/main.ae7776f0.css.map",
-    "main.7734f593.js.map": "/home/static/js/main.7734f593.js.map"
+    "main.3bef0d99.css.map": "/home/static/css/main.3bef0d99.css.map",
+    "main.af50cb57.js.map": "/home/static/js/main.af50cb57.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae7776f0.css",
-    "static/js/main.7734f593.js"
+    "static/css/main.3bef0d99.css",
+    "static/js/main.af50cb57.js"
   ]
 }
