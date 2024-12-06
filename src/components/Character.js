@@ -32,7 +32,10 @@ const dialogs = {
 };
 
 const Character = ({ page, isPlaying, index, subIndex, setSubIndex }) => {
+  const view_width = window.innerWidth;
   const [action, setAction] = useState(stand);
+
+  console.log(view_width);
 
   const handleDialogAnimation = useCallback(() => {
     if (isPlaying) {
@@ -64,7 +67,12 @@ const Character = ({ page, isPlaying, index, subIndex, setSubIndex }) => {
   }, [handleDialogAnimation]);
 
   return (
-    <div className="char-container">
+    <div
+      className="char-container"
+      style={
+        view_width < 414 ? { display: "none" } : { display: "inline-block" }
+      }
+    >
       <Spritesheet
         className="character"
         image={action}
